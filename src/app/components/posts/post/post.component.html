@@ -1,0 +1,11 @@
+<div class=" container" *ngIf="post$ | async as post">
+    {{post.titlePost}}
+    <div class="text-center">
+        <img [src]="post.imagePost" alt="">
+    </div>
+    <div>
+        <p class="date">Fecha de publicación:</p>
+        <h2>{{post.titlePost}}</h2>
+        <p class="content">{{post.contentPost}}</p>
+    </div>
+</div>

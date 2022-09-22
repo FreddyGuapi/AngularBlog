@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angularblog-5572c": {
+      "hosting": {
+        "angularBlog": [
+          "angularblog-5572c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angularblog-5572c"
+  }
+}

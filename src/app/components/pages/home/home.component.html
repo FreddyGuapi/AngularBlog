@@ -1,0 +1,26 @@
+<div class="content container" *ngIf="(posts$ | async) as posts;else loading">
+  <div class="card text-bg-dark " *ngFor="let post of posts$ | async" [ngClass]="'grid'+post.id">
+    <div >
+      <img [src]="post.imagePost" alt="..." >
+
+    <div class="card-img-overlay">
+        <a [routerLink]="['/post',post.id]">
+            <h5 class="card-title">{{post.titlePost}}</h5>
+        </a>
+      <p class="card-text">{{post.contentPost}}</p>
+      <p class="card-text"><small>{{post.date | date}}</small></p>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example" >
+      <button type="button" class="btn btn-primary" *ngFor="let item of post.tagsPost" selected [ngClass]="item">{{item}}</button>
+    </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading class="loading container">
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+</ng-template>

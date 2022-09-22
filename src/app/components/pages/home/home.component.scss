@@ -1,0 +1,37 @@
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(2, 1fr);
+    margin-top: 4rem;
+
+    img{
+        height: 500px;
+    }
+
+    .card-img-overlay{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p{
+            font-size: .8rem;
+        }
+    }
+
+
+ 
+    .sport{
+        background-color: rgb(68, 31, 31);
+    }
+
+    .life{
+        background-color: rgb(57, 64, 42);
+    }
+
+
+
+}
+.d-flex{
+    margin-top: 25%;
+}
